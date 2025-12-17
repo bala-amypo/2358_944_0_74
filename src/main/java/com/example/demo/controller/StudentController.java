@@ -15,21 +15,21 @@ import com.example.demo2.entity.Studententity;
 import com.example.demo2.service.Studentservice;
 
 @RestController
-public class StudentcController {
+public class StudentController {
     @Autowired
-    Studentservice src;
+    StudentService src;
     @PatchMapping("/post")
-    public Studententity postdata(@RequestBody Studententity st){ //to show the only one data
+    public StudentEntity postdata(@RequestBody StudentEntity st){ //to show the only one data
         return src.savedata(st);
     }
     @GetMapping("/get")
     // list used to retrive all the data
-    public List<Studententity> getdata(){
+    public List<st> getdata(){
         return src.retdata();
     }
     @GetMapping("/getid/{id}")
     //particular details only taken @PathVariable is used to work for {id} 
-    public Studententity getIdVal(@PathVariable int id){
+    public StudEntntity getIdVal(@PathVariable int id){
         return src.id(id);
     }
     @PutMapping("/update/{id}")

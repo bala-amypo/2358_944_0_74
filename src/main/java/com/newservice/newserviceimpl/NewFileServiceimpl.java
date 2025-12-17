@@ -14,7 +14,7 @@ this.rep=rep;
 }
 @Override
 public NewfileEntity savedata(NewfileEntity newfile) {
-    return rep.new.life
+    return rep.save(newfile);
 }
 @Override
 public NewfileEntity getidval(Long id) {
@@ -23,7 +23,7 @@ public NewfileEntity getidval(Long id) {
 public List<NewfileEntity> getall() {
 }
 @Override
-public NewfileEntity update(Long id, NewfileEntity newfile){
+public List NewfileEntity update(Long id, NewfileEntity newfile){
 
 }
 
